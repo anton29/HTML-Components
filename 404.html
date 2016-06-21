@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<!--<title>Node Email application</title>-->
+		<script>
+			function goBack() {
+			    window.history.back();
+			}
+		</script>
+		<style>
+			body{
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				/* bring your own prefixes */
+				transform: translate(-50%, -50%);
+			}
+		</style>
+	</head>
+<body>
+<div id="container">
+	<div style="color:#444;font-family:Open Sans;font-size:30px;text-align:center;">The Victoria Blake Collection ..404!!</div>
+	<div style="text-align: center"> <img src="logo.png"> </div>
+	<div style="color:#444;font-family:Open Sans;font-size:24px;text-align:center;">The page you were looking for appears to have been moved, deleted or does not exist. </div>
+	<div style="color:#444;font-family:Open Sans;font-size:18px;text-align:center;"> Would you like to <a href="javascript:history.back()">go back</a> to where you were or go straight back to the <a href="/">home page</a></div>
+	
+	<!--
+	<div style="text-align: center">
+		<button onclick="goBack()">Go Back</button>
+	</div>
+	-->
+<span id="message"></span>
+</div>
+</div>
