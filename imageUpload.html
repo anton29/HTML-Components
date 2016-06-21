@@ -1,0 +1,29 @@
+<script>
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+	  // document.write(preview.src);
+	   var url = preview.src;
+	   document.getElementById("demo").innerHTML = url;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+	
+
+  }
+
+  previewFile();  //calls the function named previewFile()
+  </script>
+
+
+<input type="file" onchange="previewFile()"><br>
+<p id="demo"></p>
+<img src="" height="200" alt="Image preview...">
